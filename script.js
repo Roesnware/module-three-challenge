@@ -36,12 +36,22 @@ function generatePassword(){
   }
 
   // prompt for numbers
+  let numAnswer = confirm("Would you like numbers in your secure password?");
+  console.log(numAnswer);
 
   // add numbers
+  if(numAnswer){
+    securePassArr = addToArray(numbersArr, securePassArr);
+  }
 
   // prompt for lower case
+  let lowerCaseAnswer = confirm("Would you like lower case characters in your secure password?");
+  console.log(lowerCaseAnswer);
 
   // add lower case array
+  if(lowerCaseAnswer){
+    securePassArr = addToArray(lowerCaseArr, securePassArr);
+  }
 
   // prompt for upper case
 
