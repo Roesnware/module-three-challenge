@@ -14,13 +14,15 @@ function writePassword() {
   // console.log(passLength); 
 
   if(passLength < 8){
-    console.log("this is lower than range");
+    window.alert("this is lower than range. Please try again.");
+    // console.log("this is lower than range");
     writePassword();
   } else if (passLength > 128){
-    console.log("this is higher than range");
+    window.alert("this is higher than range. Please try again.");
+    // console.log("this is higher than range");
     writePassword();
   }else{
-    console.log("this is in the range");
+    // console.log("this is in the range");
 
     var password = generatePassword(passLength);
     password = removeCommas(password);
