@@ -54,8 +54,15 @@ function generatePassword(){
   }
 
   // prompt for upper case
+  let upperCaseAnswer = confirm("Would you like upper case characters in your secure password?");
+  console.log(upperCaseAnswer);
 
   // add upper case array
+  if(upperCaseAnswer){
+    securePassArr = addToArray(upperCaseArr, securePassArr);
+  }
+
+  console.log(securePassArr.toString());
 
   // get random charcters in new array
 
