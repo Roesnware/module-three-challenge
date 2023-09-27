@@ -26,7 +26,7 @@ Please refer to the LICENSE in the repo.
 
 ## Screenshot
 
-![Alt text](.assets/images/screenshot.JPG)
+![Alt text](screenshot.JPG)
 
 ## Deployment link
 
