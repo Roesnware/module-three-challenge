@@ -9,23 +9,33 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  password = removeCommas(password);
-  var passwordText = document.querySelector("#password");
+  // prompt for length
+  let passLength = window.prompt("What is the length you would like");
+  // console.log(passLength); 
 
-  passwordText.value = password;
+  if(passLength < 8){
+    console.log("this is lower than range");
+    writePassword();
+  } else if (passLength > 128){
+    console.log("this is higher than range");
+    writePassword();
+  }else{
+    console.log("this is in the range");
+
+    var password = generatePassword(passLength);
+    password = removeCommas(password);
+    var passwordText = document.querySelector("#password");
+
+    passwordText.value = password;
+  }
 }
 
 // main func
-function generatePassword(){
+function generatePassword(passLength){
 
   // declare empty array
   let securePassArr = [];
   let finalSecurePass = [];
-
-  // prompt for length
-  let passLength = window.prompt("What is the length you would like");
-  // console.log(passLength);
 
   // prompt for special char
   let specCharAnswer = window.confirm("Would you like special Characters in your secure password?");
