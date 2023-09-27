@@ -90,4 +90,4 @@ function getRandom(length){
 generateBtn.addEventListener("click", writePassword);
 
 // call main func
-
+generatePassword();
