@@ -81,7 +81,10 @@ function addToArray(array1, array2){
 }
 
 // function to get random number 
-
+function getRandom(length){
+  let index = Math.floor(Math.random() * length);
+  return index;
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
