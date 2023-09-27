@@ -18,7 +18,7 @@ function writePassword() {
 // main func
 function generatePassword(){
 
-  // declare empty arrays
+  // declare empty array
   let securePassArr = [];
   let finalSecurePass = [];
 
@@ -27,8 +27,13 @@ function generatePassword(){
   console.log(passLength);
 
   // prompt for special char
+  let specCharAnswer = confirm("Would you like special Characters in your secure password?");
+  console.log(specCharAnswer);
 
   // add special char array
+  if(specCharAnswer){
+    securePassArr = addToArray(specialCharArr, securePassArr);
+  }
 
   // prompt for numbers
 
