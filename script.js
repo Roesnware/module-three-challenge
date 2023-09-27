@@ -65,10 +65,13 @@ function generatePassword(){
   console.log(securePassArr.toString());
 
   // get random charcters in new array
-
+  for(let j = 0; j < passLength; j++){
+    var ctr = getRandom(securePassArr.length);
+    finalSecurePass[j] = securePassArr[ctr];
+  }
 
   // print securePass array on page
-
+  alert("Your secure password is: "+finalSecurePass);
 }
 
 // function to add elements to array
