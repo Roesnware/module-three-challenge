@@ -75,7 +75,10 @@ function generatePassword(){
 }
 
 // function to add elements to array
-
+function addToArray(array1, array2){
+  let passArr = [].concat(array1, array2)
+  return passArr;
+}
 
 // function to get random number 
 
