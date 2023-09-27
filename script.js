@@ -24,11 +24,11 @@ function generatePassword(){
 
   // prompt for length
   let passLength = prompt("What is the length you would like");
-  console.log(passLength);
+  // console.log(passLength);
 
   // prompt for special char
   let specCharAnswer = confirm("Would you like special Characters in your secure password?");
-  console.log(specCharAnswer);
+  // console.log(specCharAnswer);
 
   // add special char array
   if(specCharAnswer){
@@ -37,7 +37,7 @@ function generatePassword(){
 
   // prompt for numbers
   let numAnswer = confirm("Would you like numbers in your secure password?");
-  console.log(numAnswer);
+  // console.log(numAnswer);
 
   // add numbers
   if(numAnswer){
@@ -46,7 +46,7 @@ function generatePassword(){
 
   // prompt for lower case
   let lowerCaseAnswer = confirm("Would you like lower case characters in your secure password?");
-  console.log(lowerCaseAnswer);
+  // console.log(lowerCaseAnswer);
 
   // add lower case array
   if(lowerCaseAnswer){
@@ -55,14 +55,14 @@ function generatePassword(){
 
   // prompt for upper case
   let upperCaseAnswer = confirm("Would you like upper case characters in your secure password?");
-  console.log(upperCaseAnswer);
+  // console.log(upperCaseAnswer);
 
   // add upper case array
   if(upperCaseAnswer){
     securePassArr = addToArray(upperCaseArr, securePassArr);
   }
 
-  console.log(securePassArr.toString());
+  // console.log(securePassArr.toString());
 
   // get random charcters in new array
   for(let j = 0; j < passLength; j++){
@@ -71,7 +71,7 @@ function generatePassword(){
   }
 
   // print securePass array on page
-  alert("Your secure password is: "+finalSecurePass);
+  return finalSecurePass
 }
 
 // function to add elements to array
@@ -90,4 +90,4 @@ function getRandom(length){
 generateBtn.addEventListener("click", writePassword);
 
 // call main func
-generatePassword();
+writePassword();
