@@ -24,11 +24,11 @@ function generatePassword(){
   let finalSecurePass = [];
 
   // prompt for length
-  let passLength = prompt("What is the length you would like");
+  let passLength = window.prompt("What is the length you would like");
   // console.log(passLength);
 
   // prompt for special char
-  let specCharAnswer = confirm("Would you like special Characters in your secure password?");
+  let specCharAnswer = window.confirm("Would you like special Characters in your secure password?");
   // console.log(specCharAnswer);
 
   // add special char array
@@ -37,7 +37,7 @@ function generatePassword(){
   }
 
   // prompt for numbers
-  let numAnswer = confirm("Would you like numbers in your secure password?");
+  let numAnswer = window.confirm("Would you like numbers in your secure password?");
   // console.log(numAnswer);
 
   // add numbers
@@ -46,7 +46,7 @@ function generatePassword(){
   }
 
   // prompt for lower case
-  let lowerCaseAnswer = confirm("Would you like lower case characters in your secure password?");
+  let lowerCaseAnswer = window.confirm("Would you like lower case characters in your secure password?");
   // console.log(lowerCaseAnswer);
 
   // add lower case array
@@ -55,7 +55,7 @@ function generatePassword(){
   }
 
   // prompt for upper case
-  let upperCaseAnswer = confirm("Would you like upper case characters in your secure password?");
+  let upperCaseAnswer = window.confirm("Would you like upper case characters in your secure password?");
   // console.log(upperCaseAnswer);
 
   // add upper case array
