@@ -10,6 +10,7 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+  password = removeCommas(password);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -84,6 +85,15 @@ function addToArray(array1, array2){
 function getRandom(length){
   let index = Math.floor(Math.random() * length);
   return index;
+}
+
+// function remove commas and concat to string
+function removeCommas(array){
+  let withoutCommas = "";
+  for(let k = 0; k < array.length; k++){
+    withoutCommas += array[k];
+  }
+  return withoutCommas;
 }
 
 // Add event listener to generate button
