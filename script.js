@@ -19,8 +19,12 @@ function writePassword() {
 function generatePassword(){
 
   // declare empty arrays
+  let securePassArr = [];
+  let finalSecurePass = [];
 
   // prompt for length
+  let passLength = prompt("What is the length you would like");
+  console.log(passLength);
 
   // prompt for special char
 
